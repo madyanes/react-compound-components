@@ -5,6 +5,7 @@ function App() {
   return (
     <div>
       <h1>Compound Component Pattern</h1>
+      {/*       
       <Counter
         iconIncrease='+'
         iconDecrease='-'
@@ -13,6 +14,22 @@ function App() {
         hideIncrease={false}
         hideDecrease={false}
       />
+      */}
+      <div>
+        <Counter>
+          <Counter.Label>My super flexible counter</Counter.Label>
+          <Counter.Increase icon='+' />
+          <Counter.Count />
+          <Counter.Decrease icon='-' />
+        </Counter>
+      </div>
+      <div>
+        <Counter>
+          <Counter.Decrease icon='◄' />
+          <Counter.Count />
+          <Counter.Increase icon='►' />
+        </Counter>
+      </div>
     </div>
   )
 }
